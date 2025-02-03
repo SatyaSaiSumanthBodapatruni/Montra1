@@ -1,0 +1,1 @@
+mainbgcolor = "blue"
