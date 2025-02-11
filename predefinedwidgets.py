@@ -34,7 +34,7 @@ class CustomTable(QTableWidget):
         self.setAlternatingRowColors(True)
 
         self.setColumnCount(5)
-        self.setRowCount(100)
+        self.setRowCount(300)
 
         # Change table color
         # bg1 = "#10111F"

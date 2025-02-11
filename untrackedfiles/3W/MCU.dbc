@@ -1,0 +1,497 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: CLUSTER BMS HCU MCU Test_Node
+VAL_TABLE_ Enable_Enum 1 "ENABLE" 0 "DISABLE" ;
+VAL_TABLE_ MCU_PowerOn_Status_enum 3 "POWERON_COMPLETED" 2 "POWERON_LDO_ENABLED" 1 "POWERON_LDO_WAIT" 0 "POWERON_LDO_DISABLED" ;
+VAL_TABLE_ Vt_Sig_MCU_eep_state 12 "EEPROM_USED_BUF_HIGH" 11 "EEPROM_FAIL" 10 "EEPROM_COMPLETE" 9 "EEPROM_VERIFY" 8 "EEPROM_READ" 7 "EEPROM_WRITE" 6 "EEPROM_PREWRITE" 5 "EEPROM_CALC_CHECKSUM" 4 "EEPROM_RD_WR_CHECK" 3 "EEPROM_VERIFY_ONCE" 2 "EEPROM_DATA_DEFAULT" 1 "EEPROM_READ_ONCE" 0 "EEPROM_INIT" ;
+VAL_TABLE_ Msg_Activate_Status 1 "Activated" 0 "Not_Activated" ;
+VAL_TABLE_ ReadyStatus 1 "Ready" 0 "Not Ready" ;
+VAL_TABLE_ vtSig_MCU_Curr_Ctrl_Mode_Status 1 "Enable" 0 "Disable" ;
+VAL_TABLE_ MCU_Mode_Req 2 "Regenerative" 1 "Active" 0 "Idle" ;
+VAL_TABLE_ Vt_Sig_MCU_MCU_ReadySignal 1 "Ready" 0 "Not Ready" ;
+VAL_TABLE_ Vt_Sig_MCU_SideStand 1 "Deactive" 0 "Active" ;
+VAL_TABLE_ Vt_Sig_MCU_PwmDriverControl 1 "Enable" 0 "Disable" ;
+VAL_TABLE_ Vt_Sig_MCU_Brake_Control 1 "Enable" 0 "Disable" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_RS485_Checksum 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Throttle_IP_STG 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Throttle_IP_STB 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Throttle_IP_OC 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Rotor_Stall_Protn 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Position_Sensor 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHY_Wding_Discnt 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHY_Volt_Sensor 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHY_Over_Current 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHY_Curr_Sensor 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHR_Wdig_Discnt 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHR_Volt_Sensor 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHR_Over_Current 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHR_Curr_Sensor 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHB_Wdig_Discont 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHB_Volt_Sensor 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHB_Over_Current 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_PHB_Curr_Sensor 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Mach_Temp_STG 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Mach_Temp_STB 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Mach_Temp_OC 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Mach_Temp_High 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_DC_Bus_Over_Crnt 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_CAN_Comm 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Board_Temp_High 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Msg_Checksum 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_Alive_Counter 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_5V_Volt_STG 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_5V_Volt_STB 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_5V_Low_Volt 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_5V_High_Volt 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_48V_Under_Volt 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_48V_Over_Volt 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_12V_Volt_STG 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_12V_Volt_STB 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_12V_Volt_Low 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ Vt_Sig_MCU_Flt_12V_Volt_High 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ InvalidFault 255 "Invalid" ;
+VAL_TABLE_ Fault 1 "Fault" 0 "No Fault " ;
+VAL_TABLE_ ModstatusValue 4 "ESA" 3 "SpdCtrl" 2 "TqCtrl" 1 "StandBy" 0 "Init" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Mcu_Flt_12V_Sensor_STG : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_KL30Low : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_KL30High : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_rtev_BatteryPackTempFault : 0|1@0+ (1,0) [0|1] "Status" Vector__XXX
+ SG_ MCU_Flt_Loss_of_BMSvoltMon : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_LossofBMSMessage : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_BatteryHighTempFault : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ rtev_OnAxis_Total_SampleCnt : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ rtev_OnAxis_Pass__SampleCnt : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ rtev_OnAxis_Fail__SampleCnt : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU_Flt_DCCrntSensorSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_DCCrntSensorSTG_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_BphaseSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_BphaseSTG_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_YphaseSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_YphaseSTG_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_RphaseSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_RphaseSTG_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_MachineTempSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_MachineTempSTG_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_MachineTempSTG_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_BoardTempSensorSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_RphaseSTG_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_MachineTempSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_BoardTmpSensorSTG_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_ThrottleSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_ThrottleSTG_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_MicroSensorSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_MicroUnderVolt_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_KL30SensorSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_KL30SensorSTG_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Flt_BatSensorSTB_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Mcu_Flt_Cluster_MsgLoss_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Mcu_Flt_BMS_MsgLoss_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Mcu_Flt_CAN_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Mcu_Flt_OnAxis_Cnt : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 513 BAT_INFO_SOC: 8 Vector__XXX
+ SG_ BAT_INFO_SOC : 39|16@0+ (1,0) [0|100] "Percentage" Vector__XXX
+
+BO_ 1544 MCU_PM_TEMP: 8 Vector__XXX
+ SG_ MCU_PM_TEMP3_signal : 23|8@0+ (1,-55) [-55|200] "" Vector__XXX
+ SG_ MCU_PM_TEMP2_signal : 15|8@0+ (1,-55) [-55|200] "" Vector__XXX
+ SG_ MCU_PM_TEMP1_signal : 7|8@0+ (1,-55) [-55|200] "" Vector__XXX
+
+BO_ 522 BMS_Bat_Volt_Mon: 8 Vector__XXX
+ SG_ Battery_Temp_Fault : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_batVoltMon_VoltErr : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1367 Cfg_Msg4_Tx: 8 MCU
+ SG_ Cfg_Max_ReverseSpeed_Tx : 39|10@0+ (1,0) [0|1023] "Rpm" Vector__XXX
+ SG_ Cfg_Max_ParkModeSpeed_Tx : 23|12@0+ (1,0) [0|4095] "rpm" Vector__XXX
+ SG_ Cfg_Max_EcoModeSpeed_Tx : 7|14@0+ (1,0) [0|16383] "rpm" Vector__XXX
+
+BO_ 1366 Cfg_Msg3_Tx: 8 MCU
+ SG_ Cfg_MotorDirection_Tx : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Cfg_Regen_MinVoltage_Tx : 47|8@0+ (1,0) [0|50] "%" Vector__XXX
+ SG_ Cfg_PowerModeMaxCurr_TL_Tx : 39|8@0+ (1,0) [0|100] "S" Vector__XXX
+ SG_ Cfg_PowerModeMaxCurrent_Tx : 7|10@0+ (1,0) [0|230] "Amps" Vector__XXX
+ SG_ Cfg_MinVolt_For_PowerMode_Tx : 31|8@0+ (1,0) [0|70] "V" Vector__XXX
+ SG_ Cfg_Regen_MaxVoltage_Tx : 23|8@0+ (1,0) [0|70] "V" Vector__XXX
+
+BO_ 1365 Cfg_Msg2_Tx: 8 MCU
+ SG_ Cfg_MinBattVoltage_Tx : 55|8@0+ (1,0) [0|50] "V" Vector__XXX
+ SG_ Cfg_Regen_MinSpeed_Tx : 23|14@0+ (1,0) [500|16383] "rpm" Vector__XXX
+ SG_ Cfg_Regen_NegTorque_Tx : 47|8@0+ (-0.5,0) [-25.6|0] "Nm" Vector__XXX
+ SG_ Cfg_Regen_Max_SOC_Tx : 39|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Cfg_Regen_Max_Current_Tx : 6|10@0+ (1,0) [0|100] "Amps" Vector__XXX
+ SG_ Cfg_Regen_Ena_Dis_Tx : 7|1@0+ (1,0) [0|1] "Bool" Vector__XXX
+
+BO_ 1364 Cfg_Msg1_Tx: 8 MCU
+ SG_ Cfg_Max_DCBusCurrent_Tx : 55|10@0+ (1,0) [0|230] "Amps" Vector__XXX
+ SG_ Cfg_Max_PowerModeSpeed_Tx : 39|14@0+ (1,0) [0|16383] "RPM" Vector__XXX
+ SG_ Cfg_Max_PhaseCurrent_Tx : 23|10@0+ (1,0) [0|690] "Amps" Vector__XXX
+ SG_ Cfg_Max_DriveModeSpeed_Tx : 7|14@0+ (1,0) [0|16383] "rpm" Vector__XXX
+
+BO_ 1363 Cfg_Msg4_Rx: 8 Test_Node
+ SG_ Cfg_Max_ReverseSpeed_Rx : 39|10@0+ (1,0) [0|1023] "Rpm" Vector__XXX
+ SG_ Cfg_Max_ParkModeSpeed_Rx : 23|12@0+ (1,0) [0|4095] "rpm" Vector__XXX
+ SG_ Cfg_Max_EcoModeSpeed_Rx : 7|14@0+ (1,0) [0|16383] "rpm" Vector__XXX
+
+BO_ 1362 Cfg_Msg3_Rx: 8 Test_Node
+ SG_ Cfg_MotorDirection_Rx : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cfg_Regen_MinVoltage_Rx : 47|8@0+ (1,0) [0|255] "%" Vector__XXX
+ SG_ Cfg_PowerModeMaxCurr_TL_Rx : 39|8@0+ (1,0) [0|255] "S" Vector__XXX
+ SG_ Cfg_PowerModeMaxCurrent_Rx : 1|10@0+ (1,0) [0|1023] "Amps" Vector__XXX
+ SG_ Cfg_MinVolt_For_PowerMode_Rx : 31|8@0+ (1,0) [0|255] "V" Vector__XXX
+ SG_ Cfg_Regen_MaxVoltage_Rx : 23|8@0+ (1,0) [0|255] "V" Vector__XXX
+
+BO_ 1361 Cfg_Msg2_Rx: 8 Test_Node
+ SG_ Cfg_MinBattVoltage_Rx : 55|8@0+ (1,0) [0|50] "V" Vector__XXX
+ SG_ Cfg_Regen_MinSpeed_Rx : 39|14@0+ (1,0) [500|16383] "rpm" Vector__XXX
+ SG_ Cfg_Regen_NegTorque_Rx : 31|8@0+ (-0.5,0) [-25.6|0] "Nm" Vector__XXX
+ SG_ Cfg_Regen_Max_SOC_Rx : 23|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Cfg_Regen_Max_Current_Rx : 6|10@0+ (1,0) [0|100] "Amps" Vector__XXX
+ SG_ Cfg_Regen_Ena_Dis_Rx : 7|1@0+ (1,0) [0|1] "Bool" Vector__XXX
+
+BO_ 1360 Cfg_Msg1_Rx: 8 Test_Node
+ SG_ Cfg_Max_DCBusCurrent_Rx : 55|10@0+ (1,0) [0|1023] "Amps" Vector__XXX
+ SG_ Cfg_Max_PowerModeSpeed_Rx : 39|14@0+ (1,0) [0|16383] "RPM" Vector__XXX
+ SG_ Cfg_Max_PhaseCurrent_Rx : 23|10@0+ (1,0) [0|690] "Amps" Vector__XXX
+ SG_ Cfg_Max_DriveModeSpeed_Rx : 7|14@0+ (1,0) [0|16383] "rpm" Vector__XXX
+
+BO_ 1025 CLS_VEHC_INFO_1: 8 CLUSTER
+ SG_ VEHC_INFO_vehicle_angle : 15|16@0+ (1,0) [0|359] "Deg" Vector__XXX
+ SG_ VEHC_INFO_brake_oil : 0|1@0+ (1,0) [0|0] "Bool" Vector__XXX
+
+BO_ 1028 MCU_PID_REQUEST_MSG: 8 HCU
+ SG_ MCU_Spd_Req_Kd : 55|16@0+ (0.0001,0) [0|2] "" Vector__XXX
+ SG_ MCU_Spd_Req_Ki : 39|16@0+ (0.0001,0) [0|2] "" Vector__XXX
+ SG_ MCU_Spd_Req_Kp : 23|16@0+ (0.0001,0) [0|2] "" Vector__XXX
+ SG_ MCU_Reserved_5 : 9|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_CANSpeedGainEN : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_PARKMaxSpeedFrwd : 7|13@0+ (1,0) [0|5000] "" Vector__XXX
+
+BO_ 1303 MCU_DATA_STATUS5: 8 MCU
+ SG_ MCU_PowerDown_en : 63|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_PowerOn_Status : 31|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Mcu_Flt_BMSVoltageSensor : 27|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_ChargerConnectStatus : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_EcoModeEn : 24|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_rtev_BMS_Ready_status : 61|1@0+ (1,0) [0|1] "Status" Vector__XXX
+ SG_ MCU_dio_phase_ctrl_status : 60|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VehicleSpeed : 23|8@0+ (1,0) [0|255] "kmph" Vector__XXX
+ SG_ MCU_Asw_machineSpeed : 7|16@0- (1,0) [-32768|32767] "RPM" Vector__XXX
+ SG_ MCU_Ctrl_Mode_sts : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU_dio_over_curr_status : 59|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_dio_over_volt_status : 58|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_ParkAsstStatus : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_handbrake_status : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_NeutralModeEn : 55|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_DriveModeEn : 54|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_PowerModeEn : 53|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_CANDataOutOfRange : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_RpmTooHigh : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_PositiveCurrentGenMode : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_OnAxis_Comm : 49|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_NegativeCurrentMotorMode : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_LossofClusterMessage : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_BatterySensorSTG : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VehSliderSwitchStatus : 42|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ MCU_Flt_BatterySensorSTB : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1288 MCU_VERSION_INFO: 8 MCU
+ SG_ MCU_Boot_Version_Minor : 43|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Soft_Version_Month : 50|5@0+ (1,0) [0|12] "bit" Vector__XXX
+ SG_ MCU_OEM_Version : 39|3@0+ (1,0) [0|7] "bit" Vector__XXX
+ SG_ MCU_Main_Version : 61|5@0+ (1,0) [0|31] "bit" Vector__XXX
+ SG_ MCU_TimeSinceKeyOn : 7|16@0+ (1,0) [0|65535] "bit" Vector__XXX
+ SG_ MCU_Sub_Version : 27|4@0+ (1,0) [0|15] "bit" Vector__XXX
+ SG_ MCU_Soft_Version_Year : 23|6@0+ (1,0) [19|26] "bit" Vector__XXX
+ SG_ MCU_Boot_Version_Major : 47|4@0+ (1,0) [0|15] "bit" Vector__XXX
+ SG_ MCU_Soft_Version_Minutes : 17|6@0+ (1,0) [0|60] "bit" Vector__XXX
+ SG_ MCU_Soft_Version_Hour : 36|5@0+ (1,0) [0|31] "bit" Vector__XXX
+ SG_ MCU_Soft_Version_Day : 55|5@0+ (1,0) [0|31] "bit" Vector__XXX
+
+BO_ 1287 MCU_PHASE_CUR_STATUS_INFO: 8 MCU
+ SG_ rtev_abs_max_delta_phCt_r : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ rtev_abs_max_deltatheta : 55|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+ SG_ MCU_Phasecurrent_Y : 23|16@0- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
+ SG_ MCU_Phasecurrent_R : 7|16@0- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
+ SG_ MCU_Phasecurrent_B : 39|16@0- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
+
+BO_ 1291 MCU_DATA_STATUS4: 8 MCU
+ SG_ MCU_Board_Temp : 63|8@0+ (1,-55) [-55|200] "deg" Vector__XXX
+ SG_ MCU_12v_battery_monitor : 47|8@0+ (0.0714,0) [0|18.207] "V" Vector__XXX
+ SG_ MCU_Machine_Temp : 55|8@0+ (1.4,-55) [-55|302] "deg" Vector__XXX
+ SG_ MCU_Ignition_Inp_Volt_monitor : 7|16@0+ (0.001373,0) [0|89.979555] "V" Vector__XXX
+ SG_ MCU_DcBusVolt_Monitor : 23|16@0+ (0.001373,0) [12|82] "V" Vector__XXX
+ SG_ MCU_5v_Monitor : 39|8@0+ (0.0625,0) [0|15.9375] "V" Vector__XXX
+
+BO_ 1285 MCU_DATA_STATUS3: 8 MCU
+ SG_ MCU_Status_3_Res_002 : 23|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_Status_3_Res_001 : 7|6@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_Applied_PWM_duty_y : 55|8@0+ (0.01,0) [0|100] "%" Vector__XXX
+ SG_ MCU_Applied_PWM_duty_r : 47|8@0+ (0.01,0) [0|100] "%" Vector__XXX
+ SG_ MCU_Applied_PWM_duty_b : 63|8@0+ (0.01,0) [0|100] "%" Vector__XXX
+ SG_ MCU_Regbreakvolt : 39|8@0+ (1,0) [0|255] "V" Vector__XXX
+ SG_ MCU_RegbreakCurrent : 1|10@0+ (1,0) [0|1023] "A" Vector__XXX
+ SG_ MCU_Dc_Bus_Current : 18|11@0- (1,0) [-1024|1023] "A" Vector__XXX
+
+BO_ 1283 MCU_DATA_STATUS1: 8 MCU
+ SG_ MCU_RotorSpeed : 55|16@0- (1,0) [0|65535] "RPM" Vector__XXX
+ SG_ MCU_AngleOffset : 39|16@0- (0.001,-5) [-37.768|27.767] "" Vector__XXX
+ SG_ MCU_TrqActual : 23|16@0- (1,0) [-32768|32767] "Nm" Vector__XXX
+ SG_ MCU_TrqAvailable : 7|16@0- (1,0) [-32768|32767] "Nm" Vector__XXX
+
+BO_ 1284 MCU_DATA_STATUS2: 8 MCU
+ SG_ MCU_eep_state : 15|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_VehSliderSwitchStatus : 5|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ MCU_Curr_Ctrl_Mode : 29|1@0+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ MCU_Acceleration_Volt_St : 55|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ MCU_Rotor_theta : 39|16@0+ (0.001,0) [0|10.475] "deg" Vector__XXX
+ SG_ MCU_Immobilze_sig : 23|10@0+ (1,0) [0|500] "Hz" Vector__XXX
+ SG_ MCU_Ctrl_Mode_sts : 28|4@0+ (1,0) [0|15] "bool" Vector__XXX
+ SG_ MCU_VehicleFwdRevSt : 0|1@0+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ MCU_PwmDriveEnable : 2|1@0+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ MCU_MachineMode_status : 11|4@0+ (1,0) [0|15] "bool" Vector__XXX
+ SG_ MCU_DerateActive : 24|1@0+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ MCU_BrakeInput : 1|1@0+ (1,0) [0|1] "bool" Vector__XXX
+
+BO_ 1286 MCU_FAULT_STATUS_INFO: 8 MCU
+ SG_ Mcu_Flt_Phase_Current_Sensor : 53|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_Wrong_Offset_Angle : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_WrongDirection : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_Iq_error : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BrakeLowOilFault : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_MOSFET_STG : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_MOSFET_STB : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_mtrDirflt_sts : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_MOSFET_HighTemp : 55|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_KL30Low : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_KL30High : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_KL30_Sensor_STG : 49|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_KL30_Sensor_STB : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_Ideal_Voltage_error : 54|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_DcBusUnderVoltage : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_DcBusOverVoltage : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BatterySensorSTG : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BatterySensorSTB : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BphaseSTG : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BphaseSTB : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BPhase_Current_High : 10|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BoardTempSensorSTG : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_MachineTemp_Low : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_MachineTemp_High : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_Dc_Current_High : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BoardTempSensorSTB : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BuckConverte_12V_STB : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BoardTemp_Low : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BoardTemp_High : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_Rotor_Stall : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_DCCurrentSensorSTG : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_DCCurrentSensorSTB : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_CANDataOutOfRange : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_OnAxisDataOutofRange : 24|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_OnAxisParity : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_MachineTempSTG : 27|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_MachineTempSTB : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Flt_RPhase_Current_High : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_LossofBMSMessage : 30|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BuckConverte_12V_STG : 31|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_ThrottleSTG : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_ThrottleSTB : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_ThrottleInvalidRange : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_RpmTooHigh : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_RphaseSTG : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_RphaseSTB : 38|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_BatteryHighTempFault : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_CAN_Comm : 41|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_App_Checksum : 42|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_LossofClusterMessage : 43|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_YphaseSTG : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_YphaseSTB : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_YPhase_Current_High : 46|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mcu_Flt_OnAxisCommunication : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ BU_ MCU "Motor Control Unit";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 Mcu_Flt_KL30Low "12V Low Fault";
+CM_ SG_ 3221225472 Mcu_Flt_KL30High "12V High Fault";
+CM_ BO_ 1287 "Transmitted by MCU, Signal descriptionof Phase current info";
+CM_ SG_ 1287 MCU_Phasecurrent_Y "E-Machine phase Y current";
+CM_ SG_ 1287 MCU_Phasecurrent_R "E-Machine phase R current";
+CM_ SG_ 1287 MCU_Phasecurrent_B "E-Machine phase B current";
+CM_ BO_ 1291 "Transmitted by TI ECU, including 5v,12v and Ignition Voltage info";
+CM_ SG_ 1291 MCU_Board_Temp "Machine temperature";
+CM_ SG_ 1291 MCU_12v_battery_monitor "Motor Controller  12V Supply Monitor";
+CM_ SG_ 1291 MCU_Machine_Temp "Machine temperature";
+CM_ SG_ 1291 MCU_Ignition_Inp_Volt_monitor "Ignition monitoring voltage";
+CM_ SG_ 1291 MCU_DcBusVolt_Monitor "Motor Controller 72V Supply Monitor";
+CM_ SG_ 1291 MCU_5v_Monitor "Motor Controller  5V Supply Monitor";
+CM_ BO_ 1283 "Transmitted by TI ECU, including speed and  torque information";
+CM_ SG_ 1283 MCU_RotorSpeed "Rotor speed";
+CM_ SG_ 1283 MCU_AngleOffset "Machine Offset";
+CM_ SG_ 1283 MCU_TrqActual "Torque Actual";
+CM_ SG_ 1283 MCU_TrqAvailable "Torque Available";
+CM_ BO_ 1284 "Transmitted by MCU, Signal description for system status";
+CM_ SG_ 1284 MCU_Curr_Ctrl_Mode "Vehicle forward/reverse direction status";
+CM_ SG_ 1284 MCU_Acceleration_Volt_St "Accelerator throttle I/P";
+CM_ SG_ 1284 MCU_Rotor_theta "Rotor Raw Theta";
+CM_ SG_ 1284 MCU_Immobilze_sig "Immobilizer status";
+CM_ SG_ 1284 MCU_Ctrl_Mode_sts "Vehicle Mode status (eco/sport/etc)";
+CM_ SG_ 1284 MCU_VehicleFwdRevSt "Vehicle forward/reverse direction status";
+CM_ SG_ 1284 MCU_PwmDriveEnable "PWM Drive Enable";
+CM_ SG_ 1284 MCU_MachineMode_status "MCU Operating Mode State";
+CM_ SG_ 1284 MCU_DerateActive "derate active status";
+CM_ SG_ 1284 MCU_BrakeInput "Brake I/P";
+CM_ BO_ 1286 "Transmitted by TI ECU, Signal description for Diagnostics ";
+CM_ SG_ 1286 Mcu_Flt_DcBusUnderVoltage "48V Under voltage Fault";
+CM_ SG_ 1286 Mcu_Flt_DcBusOverVoltage "48V Over voltage Fault";
+CM_ SG_ 1286 Mcu_Flt_BPhase_Current_High "Any phase over current sensor fault";
+CM_ SG_ 1286 Mcu_Flt_MachineTemp_Low "Machine temperature OC fault";
+CM_ SG_ 1286 Mcu_Flt_MachineTemp_High "Machine temperature High fault";
+CM_ SG_ 1286 Mcu_Flt_Dc_Current_High "DC bus over current fault";
+CM_ SG_ 1286 Mcu_Flt_BoardTemp_Low "Board Over Temperature  Fault";
+CM_ SG_ 1286 Mcu_Flt_BoardTemp_High "Board Over Temperature  Fault";
+CM_ SG_ 1286 Mcu_Flt_Rotor_Stall "Rotor stall protection";
+CM_ SG_ 1286 MCU_Flt_RPhase_Current_High "Any phase over current sensor fault";
+CM_ SG_ 1286 Mcu_Flt_CAN_Comm "CAN communication timeout fault";
+CM_ SG_ 1286 Mcu_Flt_App_Checksum "Application Checksum failure";
+CM_ SG_ 1286 Mcu_Flt_YPhase_Current_High "Any phase over current sensor fault";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "SigGroup" STRING ;
+BA_DEF_ SG_  "GenSigFuncType" ENUM  "NoFunction","n/a","n/a","n/a","n/a","n/a","n/a","n/a","n/a","n/a","n/a","n/a","n/a","n/a","n/a","CHK","CNTR","n/a","n/a","n/a","CNTR_AR_01","CRC_AR_01_BOTH","CRC_AR_01_ALT","CRC_AR_01_LOW","CRC_AR_01_NIBBLE","CNTR_AR_04","CRC_AR_04A","CNTR_AR_05","CRC_AR_05";
+BA_DEF_ SG_  "GenSigDataID" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","spontaneous","not-used","not-used","not-used","cyclicAndSpontaneous","not-used","cyclicIfActive","NoMsgSendType";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "yes ","no";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65536;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 65536;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 300000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "SigGroup" "";
+BA_DEF_DEF_  "GenSigFuncType" "NoFunction";
+BA_DEF_DEF_  "GenSigDataID" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgSendType" "cyclic";
+BA_DEF_DEF_  "GenMsgILSupport" "yes ";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_ "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 1284 10;
+BA_ "GenMsgCycleTime" BO_ 1286 10;
+BA_ "GenSigStartValue" SG_ 513 BAT_INFO_SOC 0;
+BA_ "GenSigStartValue" SG_ 1288 MCU_Soft_Version_Year 19;
+BA_ "GenSigStartValue" SG_ 1291 MCU_Board_Temp 110;
+BA_ "GenSigStartValue" SG_ 1291 MCU_Machine_Temp 78.5714285714286;
+BA_ "GenSigStartValue" SG_ 1291 MCU_Ignition_Inp_Volt_monitor 8011.65331391114;
+BA_ "GenSigStartValue" SG_ 1291 MCU_DcBusVolt_Monitor 26219.9563000728;
+BA_ "GenSigStartValue" SG_ 1283 MCU_AngleOffset 5000;
+BA_ "GenSigStartValue" SG_ 1283 MCU_TrqActual 0;
+BA_ "GenSigStartValue" SG_ 1283 MCU_TrqAvailable 0;
+BA_ "GenSigStartValue" SG_ 1284 MCU_Rotor_theta 0;
+VAL_ 3221225472 Mcu_Flt_12V_Sensor_STG 1 "Fault" 0 "No Fault " ;
+VAL_ 3221225472 Mcu_Flt_KL30Low 1 "Fault" 0 "No Fault" ;
+VAL_ 3221225472 Mcu_Flt_KL30High 1 "Fault" 0 "No Fault" ;
+VAL_ 3221225472 MCU_Flt_Loss_of_BMSvoltMon 1 "Fault" 0 "No Fault " ;
+VAL_ 1303 Mcu_Flt_BMSVoltageSensor 1 "Fault" 0 "No Fault " ;
+VAL_ 1303 MCU_VehSliderSwitchStatus 5 "InvalidPosition" 4 "PowerSwitchPosition" 3 "DriveSwitchPosition" 2 "EcoSwitchPosition" 1 "ParkAssistSwitchPosition" 0 "NeutralSwitchPosition" ;
+VAL_ 1284 MCU_eep_state 12 "EEPROM_USED_BUF_HIGH" 11 "EEPROM_FAIL" 10 "EEPROM_COMPLETE" 9 "EEPROM_VERIFY" 8 "EEPROM_READ" 7 "EEPROM_WRITE" 6 "EEPROM_PREWRITE" 5 "EEPROM_CALC_CHECKSUM" 4 "EEPROM_RD_WR_CHECK" 3 "EEPROM_VERIFY_ONCE" 2 "EEPROM_DATA_DEFAULT" 1 "EEPROM_READ_ONCE" 0 "EEPROM_INIT" ;
+VAL_ 1284 MCU_VehSliderSwitchStatus 5 "InvalidPosition" 4 "PowerSwitchPosition" 3 "DriveSwitchPosition" 2 "EcoSwitchPosition" 1 "ParkAssistSwitchPosition" 0 "NeutralSwitchPosition" ;
+VAL_ 1284 MCU_Curr_Ctrl_Mode 1 "Enable" 0 "Disable" ;
+VAL_ 1284 MCU_Immobilze_sig 1 "ON" 0 "OFF" ;
+VAL_ 1284 MCU_Ctrl_Mode_sts 5 "DERATE_MODE" 4 "REGEN_CTRL_L2" 3 "REGEN_CTRL_L1" 2 "SPEED_CTRL_FWD" 1 "SPEED_CTRL_REV" 0 "IDLE" ;
+VAL_ 1284 MCU_VehicleFwdRevSt 1 "Rev" 0 "Fwd" ;
+VAL_ 1284 MCU_PwmDriveEnable 1 "Enable" 0 "Disable" ;
+VAL_ 1284 MCU_MachineMode_status 15 "Derate" 14 "Invalid" 13 "RegenLevel2" 12 "RegenLevel1" 11 "Fault Mode" 10 "Limp Mode" 9 "ParkAssist Reverse" 8 "ParkAssist Forward" 7 "Reverse Mode" 6 "Power Mode" 5 "Drive Mode" 4 "Eco Mode" 3 "Neutral Mode" 2 "Idle Mode" 1 "Init Mode" ;
+VAL_ 1284 MCU_DerateActive 1 "Deactive" 0 "Active" ;
+VAL_ 1284 MCU_BrakeInput 1 "Break Pressed" 0 "Break Released" ;
+VAL_ 1286 Mcu_Flt_Phase_Current_Sensor 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_Wrong_Offset_Angle 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_WrongDirection 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 MCU_Flt_Iq_error 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_MOSFET_STG 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_MOSFET_STB 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_mtrDirflt_sts 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_MOSFET_HighTemp 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_KL30Low 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_KL30High 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_KL30_Sensor_STG 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_KL30_Sensor_STB 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_Ideal_Voltage_error 1 "Fault" 0 "No Fault " ;
+VAL_ 1286 Mcu_Flt_DcBusUnderVoltage 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_DcBusOverVoltage 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BatterySensorSTG 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BatterySensorSTB 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BphaseSTG 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BphaseSTB 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BPhase_Current_High 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BoardTempSensorSTG 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_MachineTemp_Low 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_MachineTemp_High 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_Dc_Current_High 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BoardTempSensorSTB 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BuckConverte_12V_STB 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BoardTemp_Low 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BoardTemp_High 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_Rotor_Stall 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_DCCurrentSensorSTG 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_DCCurrentSensorSTB 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_CANDataOutOfRange 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_OnAxisDataOutofRange 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_OnAxisParity 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_MachineTempSTG 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_MachineTempSTB 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 MCU_Flt_RPhase_Current_High 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_LossofBMSMessage 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BuckConverte_12V_STG 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_ThrottleSTG 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_ThrottleSTB 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_ThrottleInvalidRange 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_RpmTooHigh 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_RphaseSTG 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_RphaseSTB 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_BatteryHighTempFault 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_CAN_Comm 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_App_Checksum 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_LossofClusterMessage 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_YphaseSTG 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_YphaseSTB 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_YPhase_Current_High 1 "Fault" 0 "No Fault" ;
+VAL_ 1286 Mcu_Flt_OnAxisCommunication 1 "Fault" 0 "No Fault" ;
+

@@ -1,0 +1,561 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Telematics VCU
+VAL_TABLE_ TS_Ignition_keyswtich_status 1 "On" 0 "Off" ;
+VAL_TABLE_ TS_EPAS_Status_Info 3 "Reserved for future use" 2 "EPAS is not working" 1 "Reserved for future use" 0 "EPAS is working normal" ;
+VAL_TABLE_ BMS_FaultCodes 49 "Thermal runaway fault" 48 "Insulation fault" 47 "Internal Software fault" 46 "Internal hardware fault" 45 "Pack Voltage sensor fault" 44 "Pack CellBalancing fault" 43 "ContinousChargeCurrentOvrLoad" 42 "SOC Difference Error" 41 "Continous DisChrgeCurrentOvrLoad" 40 "Over Charge Current In Charge" 39 "Over Discharge Current In Charge" 38 "FC NegativeContactor Weld Error" 37 "FC NegativeContactor Open Error" 36 "FC PositiveContactor weld Error" 35 "FC PositiveContactor Open Error" 34 "MainNegContactor weld Error" 33 "MainNegContactor Open Error" 32 "MainPosContactor Weld Error" 31 "MainPosContactor Open Error" 30 "HeatRlyweldErr" 29 "HeatRlyOpenErr" 28 "Internal Communication fault" 27 "CAN Communication fault" 26 "Low Charging Insulation" 25 "MainPrecharge_Error" 24 "Pack self protect fault" 23 "Heating film error" 22 "Thermal System fault" 21 "PowerSupply fault" 20 "Current Sensor Fault" 19 "Over Charge Current in Drive" 18 "Over Discharge Current" 17 "Pack Fire warning fault" 16 "Low cell temperature fault" 15 "Cell Over Discharge fault" 14 "HVIL fault" 13 "Battery sys not matching fault" 12 "SOC jump / Fast change fault" 11 "Over SOC Fault" 10 "Over Charge fault" 9 "High delta cell voltage fault" 8 "Low insulation resis_in_drive" 7 "Cell Under voltage fault" 6 "Cell Over voltage fault" 5 "Low SOC fault" 4 "Pack Under voltage fault" 3 "Pack Over voltage fault" 2 "Cell Over temperature fault" 1 "High delta cell temp fault" 0 "No Fault Code" ;
+VAL_TABLE_ TS_OBC_Faults 15 "Reserved for future use" 14 "OBC_Inlet_tempsensor_fault" 13 "OBC_Internal_shutdown" 12 "OBC_Internal_Derate" 11 "OBC_Overtemp_shutdown" 10 "OBC_Overtemp_Derate" 9 "OBC_InputOverCurrent_fault" 8 "OBC_12V_fault" 7 "OBC_OutputShortckt_fault" 6 "OBC_OutputOvervolt_fault" 5 "OBC_OutputUndervolt_fault" 4 "OBC_InputUndervolt_fault" 3 "OBC_InputOvervoltage fault" 2 "OBC_Reserved1" 1 "OBC_hardware_protection" 0 "No fault" ;
+VAL_TABLE_ TS_BMS_FaultCode_Set 39 "ERROR_SYS_UNKNOWN_VOLTAGE " 38 "ERROR_SYS_TOO_MANY_BROADCAST " 37 "ERROR_SYS_LEAK_READY " 36 "ERROR_SYS_LEAK_LOAD" 35 "ERROR_SYS_LEAK_ADC" 34 "ERROR_SYS_LIM_CHG_I_OVER_UNDER " 33 "ERRORPSU_NOT_IN_DIAGNOSTIC _MODE" 32 "ERROR_SYS_PACK_SOC_CALC" 31 "ERROR_SYS_PACK_AND_CELL_INIT" 30 "ERROR_SYS_CONTACTOR_RETRIES" 29 "ERROR_SYS_FB_CHG_NEG_WELDED " 28 "ERROR_SYS_FB_PRECHARGE_WELDED" 27 "ERROR_SYS_FB_LOAD_POS_WELDED" 26 "ERROR_SYS_FB_LOAD_NEG_WELDED" 25 "ERROR_SYS_FB_PRECHARGE_MISSING" 24 "ERROR_SYS_FB_LOAD_POS_MISSING" 23 "ERROR_SYS_FB_LOAD_NEG_MISSING " 22 "ERROR_SYS_NUM_CMU_MISMATCH" 21 "ERROR_SYS_COMM_CMU" 20 "PACK_I_MASTER _SELECTION_FAULT" 19 "ERROR_SYS_CMU_PCB_T_OPEN" 18 "ERROR_SYS_CMU_PCB_T_SHORTED" 17 "ERROR_SYS_CMU_PCB_T_NO_VALUE" 16 "ERROR_SYS_UM_PACK_l_OUT" 15 "ERROR_SYS_UM_PACK_l_IN" 14 "ERROR_SYS_UM_CEl_T_MAX" 13 "ERROR_SYS_UM_CEl_T_MIN" 12 "ERROR_SYS_UM_CEl_V_MAX" 11 "ERROR_SYS_UM_CEl_V_MIN" 10 "ERROR_COMPARISON_FAILED" 9 "ERROR_COMPARISON_FAILED" 8 "Task_Mon_time_BW_Xcution_fault" 7 "TASKMON-EXECUTION TIME VIOLATION" 6 "ERROR IO INPUT UPDATE" 5 "ERROR_CAN_RX_TIMEOUT" 4 "ERROR_CAN_INVALID_RX_DATA" 3 "ERROR SRAM WRITE ERROR" 2 "ERROR_GENERAL_COM" 1 "ERROR_GENERAL_QUEUE_OVERRUN" 0 "Description for the value '0x0'" ;
+VAL_TABLE_ TS_Compressor_status 5 "Compressor_fail" 4 "Compressor_Init" 3 "Pre_Heat" 2 "Compressor_Limit" 1 "Compressor_On" 0 "Compressor_Off" ;
+VAL_TABLE_ TS_TCS_Pump_status 1 "On" 0 "Off" ;
+VAL_TABLE_ TS_Status_reserve_SOC 1 "On" 0 "Off" ;
+VAL_TABLE_ TS_Reserved_SOC_enable_cmd 1 "On" 0 "Off" ;
+VAL_TABLE_ TS_compressor_error 128 "Over peak current" 64 "Over current drop frequency" 32 "Communication Error" 16 "standby under voltage" 8 "standby over voltage" 4 "Under voltage" 2 "Over Voltage" 1 "Over Current" 0 "No Error" ;
+VAL_TABLE_ TS116_EPAS_CommunicationFailure1 13 "IC_Invalid_failure" 12 "MCU_Invalid_Failure" 11 "VCU_Invalid_Failure" 10 "INV_MTO_Failure" 9 "INV_MM_Failure" 8 "VCU_MTO_Failure" 7 "IC_MTO_Failure" 6 "IC_MM_Failure" 5 "EPAS_BO_Failure" 4 "EPAS_EP_Failure" 3 "VCU_MM_Failure" 2 "IC_CRC_Failure" 1 "IC_MRC_Failure" 0 "No faillure detected" ;
+VAL_TABLE_ TS_DCDC_faults 15 "DCDC_Reserved_fault" 14 "DCDC_12V_fault" 13 "Output_hardware_volt_over" 12 "Output_hardware_open" 11 "Hardware fault" 10 "Output_Power_Over_Fault" 9 "DCDC Communication_fault" 8 "Internal_protection_fault" 7 "Output_short_circuit_protection" 6 "Input_Undervoltage_fault" 5 "Input_Overvoltage_fault" 4 "Output_Undervoltage_fault" 3 "Output_Overvoltage_fault" 2 "Output_Overcurrent_fault" 1 "Over_Temperature_shutdown" 0 "No Fault Code" ;
+VAL_TABLE_ TS112_IC_Communication_failure 10 "VCU_Invalid_failure" 9 "MCU_Invalid_failure" 8 "IC_BO_Failure_Status" 7 "IC_EP_Failure_status" 6 "EPAS_MTO_Failure" 5 "EPAS_MM_Failure" 4 "VCU_MM_Failure" 3 "VCU_MTO_Failure" 2 "MCU_MM_Failure" 1 "MCU_MTO_failure" 0 "Failure_not_detected" ;
+VAL_TABLE_ TS111_VCU_Faults 15 "Reserved for future use" 14 "Emergency_Shutoff_Request" 13 "Brake_Coherence_Fault" 12 "Recovery_Throttle" 11 "Brake_Not_pressed" 10 "Throttle_Not_released" 9 "SDNR_Not_in_Neutral" 8 "HPD or Sequencing Fault" 7 "Brakepot_High" 6 "Brakepot_Low" 5 "Primary_ThrottlePot_High" 4 "Primary_ThrottlePot_Low" 3 "PotLowOverCurrent" 2 "MainContactorDidNotClose" 1 "MainContactorWelded" 0 "Off" ;
+VAL_TABLE_ TS_MCU_FaultCode_set4 8 "Motor_overload_alarm" 7 "Controller_overload_alarm" 6 "Reverse_direction_Ovrspd_alarm" 5 "Forward_direction_Ovrspd_alarm" 4 "DC_Overvoltage_alarm" 3 "DC_Undervoltage_alarm" 2 "Motor_overheat_alarm" 1 "Controller_overheat_alarm" 0 "No alarm" ;
+VAL_TABLE_ TS_MCU_FaultCode_set3 3 "Wphase_Current_sensor_fault" 2 "Vphase_Current_sensor_fault" 1 "Uphase_Current_sensor_fault" 0 "No fault" ;
+VAL_TABLE_ TS_MCU_FaultCode_Set2 36 "Motor overspeed fault" 35 "Drive over temp fault" 34 "Drive_Overload" 33 "W phase hall disconnection_fault" 32 "V phase hall disconnection_fault" 31 "U phase hall disconnection_fault" 30 "LV_powersupply_undervolt_fault" 29 "Pwrsuply_driveboard_xceds_limit" 28 "Controller_drive_abnormal_fault" 27 "Resolver connector is loose" 26 "Hardware_over_volt_fault" 25 "Driver_board_overrun_fault" 24 "Overvolt_of_baseline_HW_wrong" 23 "Drive_parameter_R/W_fault" 22 "xlusion_highlimit_resolvr_xluson" 21 "Drive_temp_sensor_disconnected" 20 "Motor_Output_GND_short_Ckted" 19 "Drive_protection" 18 "Software_overvoltage_fault" 17 "Software_overcurrent_fault" 16 "Communication_fault" 15 "CAN_Enable_fault" 14 "Brake_abnormal" 13 "Lost_phase" 12 "Speed_abnormal" 11 "Current_abnormal" 10 "Interlock" 9 "12V_Under_voltage" 8 "12V_Over_voltage" 7 "illegal_Model_number" 6 "Software_Abnormal" 5 "Self_Learning_abnormal" 4 "Self_Inspection_abnormality" 3 "BadCalibrations" 2 "Stall_Detected" 1 "Resolver_Fault" 0 "No fault" ;
+VAL_TABLE_ TS_MCU_FaultCode_Set1 12 "Reverse_Over_Speed" 11 "Forward_Direction_Over_Speed" 10 "RunTimeError" 9 "Motor_Temp_Sensor_Fault" 8 "Parameter_Change_fault" 7 "Current_Sensor_Fault" 6 "EEPROM_Failure" 5 "Controller_Over_Temperature" 4 "Motor_Over_Temperature" 3 "HardwareOverCurrent" 2 "OverVoltHV" 1 "UnderVoltHV" 0 "No fault" ;
+VAL_TABLE_ TS141_VCU_Faults 15 "Reserved for future" 14 "EmergencyShutoffRequest" 13 "Brake_Coherence_Fault" 12 "Recovery_Throttle" 11 "Brake_Not_Pressed" 10 "Throttle_Not_Released" 9 "SDNR_Not_in_Neutral" 8 "HPD or SequencingFault" 7 "Brakepot_high" 6 "Brakepot_Low" 5 "Primary_ThrottlePot_High" 4 "Primary_ThrottlePot_Low" 3 "PotLowOverCurrent" 2 "MaincontactorDidNotClose" 1 "MainContactor_welded" 0 "Off" ;
+VAL_TABLE_ TS106_BMS_Fault 18 "Internal_memory_fault" 17 "Internal_communication_fault" 16 "Internal_logic_fault" 15 "Internal_Conversion_fault" 14 "Internal_Thermistor_fault" 13 "Pack_Too_Hot_Fault" 12 "Voltage_Redundancy_fault" 11 "Thermistor fault" 10 "Packvoltage_sensor_fault" 9 "Current_sensor_fault" 8 "Cellvoltage_over_5V" 7 "Open_cellvoltage_fault" 6 "Low_cellvoltage_fault" 5 "Weakcell_fault" 4 "Weakpack_fault" 3 "Error_MIL_output" 2 "Current_Failsafe" 1 "Voltage_Failsafe" 0 "Off" ;
+VAL_TABLE_ Comp_Compressor_error 15 "Comp_stall_error" 14 "Comp_wire_Unbalance_error" 13 "Comp_Over_Current_error" 12 "Comp_Inpower_error" 11 "Comp_Current_sensor_error" 10 "Comp_Voltage_sensor_error" 9 "Comp_Temp_sensor_error" 7 "Comp_Communicaiton_error" 6 "Comp_Over_Load" 5 "Comp_Over_Heat" 3 "Comp_LV_Under_voltage_error" 8 "Comp_LIN_protocol_error" 4 "Comp_LV_Over_voltage_error" 2 "Comp_HV_Over_voltage_error" 1 "Comp_HV_Under_Voltage_error" 0 "No error" ;
+VAL_TABLE_ VCU17_Mode 1 "Heating mode" 0 "Battery mode" ;
+VAL_TABLE_ VCU17_OBC_Control 2 "Charging is complete" 1 "Stop charging" 0 "Start charging" ;
+VAL_TABLE_ VCU1_Key_switch_on 1 "ON" 0 "OFF" ;
+VAL_TABLE_ VCU1_Driveenable 1 "ON" 0 "OFF" ;
+VAL_TABLE_ INV5_Warning_Active 1 "ON" 0 "Off" ;
+VAL_TABLE_ INV5_Error_Active 1 "ON" 0 "Off" ;
+VAL_TABLE_ INV5_Powerstage_enabled 1 "ON" 0 "OFF" ;
+VAL_TABLE_ EPAS2_Invalid_Failure 3 "Inv Invalid Failure" 2 "IC Invalid failure" 1 "VCU Invalid Failure" 0 "No Failure" ;
+VAL_TABLE_ EPAS2_Error_code 7 "Invalid" 6 "Invalid" 5 "Torque sensor fault" 4 "PCB over temp" 3 "Gate driver over temp" 2 "Gate driver short" 1 "Battery voltage" 0 "No error" ;
+VAL_TABLE_ IC5_Ambient_temp_signal 3 "Signal not available" 2 "Value is implausible" 1 "Reserved" 0 "Value is plausible" ;
+VAL_TABLE_ IC5_ResetTripA 1 "Reset" 0 "No Action" ;
+VAL_TABLE_ IC5_ResetTripB 1 "Reset" 0 "No Action" ;
+VAL_TABLE_ IC4_Month_info 12 "December" 11 "November" 10 "October" 9 "September" 8 "August" 7 "July" 6 "June" 5 "May" 4 "April" 3 "March" 2 "February" 1 "January" 0 "Unused" ;
+VAL_TABLE_ IC3_ClockMode 1 "24 Hour Mode" 0 "12 Hour Mode" ;
+VAL_TABLE_ TS82_VIN_check 2 "Passed" 1 "Failed" 0 "Not Checked" ;
+VAL_TABLE_ VCU13_Nm_Type 2 "Active" 1 "Sleep" 0 "Wake up" ;
+VAL_TABLE_ TS75_Odometer_Reset 1 "Reset" 0 "No Action" ;
+VAL_TABLE_ VCU13_Ignition_key_signal 1 "ON" 0 "OFF" ;
+VAL_TABLE_ TS65_Drive_Efficiency 2 "Regen" 1 "Drain" 0 "ECO" ;
+VAL_TABLE_ TS64_Act_drive_mode 4 "Limphome Mode" 3 "Reverse Mode" 2 "Neutral Mode" 1 "Sports Mode" 0 "Drive Mode" ;
+VAL_TABLE_ INV5_Regulator_status 3 "Wkening cntrl with angle limit" 2 "Wkening cntrl with current limit" 1 "weakening cntrl with no limit" 0 "Weakening control not active" ;
+VAL_TABLE_ INV5_regen_status 1 "ON" 0 "OFF" ;
+VAL_TABLE_ INV5_Derating_Status 13 "DernResolverfault" 12 "DernRotor Temp" 11 "DernHeatsink Temp" 10 "DernDcPower" 9 "DernHighSpeed" 8 "DernLowSpeed" 7 "DernUndrVolt HV" 6 "DernUndrCurrent" 5 "DernRegenlimit" 4 "DernDrivelimit" 3 "Dern Stator Temp" 2 "DernOvrVolt HV" 1 "DernOvrCurrent" 0 "Disable" ;
+VAL_TABLE_ Inv5_Service_Lamp_Inv 1 "ON" 0 "OFF" ;
+VAL_TABLE_ Inv5_diagresponse 0 "Init" ;
+VAL_TABLE_ Inv5_Nm_status 3 "Error" 2 "active" 1 "sleep" 0 "wakeup" ;
+VAL_TABLE_ Inv5_Inverterstate 15 "FreewheelControl" 14 "Discharge" 13 "Failure" 12 "Prefailure" 11 "After run" 9 "Stator current control" 8 "Torque control" 6 "Speed control" 5 "Angle offset Calculation" 4 "voltage control" 3 "standy by" 1 "DrvInit" 0 "Init" ;
+VAL_TABLE_ Inv4_Rotor_temp 254 "Error" ;
+VAL_TABLE_ Inv4_stator_temp 254 "Error" ;
+VAL_TABLE_ Inv4_Inv_temp 254 "Error" ;
+VAL_TABLE_ Inv9_Reverse_direction_OvrSpd 1 "ON" 0 "OFF" ;
+
+
+BO_ 2566883338 TP18_Vehicle_Status_Info: 8 VCU
+ SG_ TS_Reserved_19 : 16|8@1+ (1,0) [0|100] ""  Telematics
+ SG_ TS_Reserved_15 : 24|8@1+ (1,0) [0|250] ""  Telematics
+ SG_ TS_Reserved_16 : 32|8@1+ (1,0) [0|250] ""  Telematics
+ SG_ TS_Vehicle_Status : 8|8@1+ (1,0) [0|250] ""  Telematics
+ SG_ TS_Brake_Status : 0|8@1+ (1,0) [0|250] ""  Telematics
+
+BO_ 2566883082 TP17_MCU_Motor_Parameters: 8 VCU
+ SG_ TS_Motor_Temperature : 32|8@1+ (1,-40) [-40|210] "Deg C"  Telematics
+ SG_ TS_Motor_RPM : 48|16@1+ (1,-32127) [-12000|12000] "rpm"  Telematics
+ SG_ TS_Motor_Phase_current_AC : 16|16@1+ (1,0) [0|1000] "A"  Telematics
+ SG_ TS_MCU_Current_DC : 0|16@1+ (0.05,-1600) [-1000|1000] "A"  Telematics
+ SG_ TS_Controller_Temperature : 40|8@1+ (1,-40) [-40|210] "Deg C"  Telematics
+
+BO_ 2566882826 TP16_Battery_Capacity_Info: 8 VCU
+ SG_ TS_Reserved_14 : 40|16@1+ (1,0) [0|64255] ""  Telematics
+ SG_ TS_Reserved_22 : 32|8@1+ (1,0) [0|250] ""  Telematics
+ SG_ TS_Battery_Full_Capacity : 16|16@1+ (0.01,0) [0|642.55] "Ah"  Telematics
+ SG_ TS_Battery_Capacity_Remaining : 0|16@1+ (0.01,0) [0|642.55] "Ah"  Telematics
+
+BO_ 2566882570 TP15_Trip_Details: 8 VCU
+ SG_ TS_Reserved_10 : 48|16@1+ (1,0) [0|64255] ""  Telematics
+ SG_ TS_TripB_Meter : 24|24@1+ (0.1,0) [0|1644953.5] "km"  Telematics
+ SG_ TS_TripA_meter : 0|24@1+ (0.1,0) [0|1644953.5] "km"  Telematics
+
+BO_ 2566887434 TP14_Battery_reserve_mode_status: 8 VCU
+ SG_ TS_battery_reserve_enable_status : 0|8@1+ (1,0) [0|250] ""  Telematics
+
+BO_ 2566887234 TP13_Battery_Reserve_mode: 8 Telematics
+ SG_ TS_Reserved_SOC_Enable_Cmd : 0|8@1+ (1,0) [0|1] ""  VCU
+
+BO_ 2566886666 TP11_EPAS_status_Info: 8 VCU
+ SG_ TS_EPAS_CAN_health : 2|4@1+ (1,0) [0|15] ""  Telematics
+ SG_ TS_EPAS_status : 0|2@1+ (1,0) [0|3] ""  Telematics
+
+BO_ 2566886922 TP12_Fault_Codes: 8 VCU
+ SG_ TS_Thermal_system_faultcodes : 32|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ TS_OBC_faults : 16|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ TS_DC_DC_Faults : 20|4@1+ (1,0) [0|15] ""  Telematics
+ SG_ TS_EPAS_FaultCode : 24|8@1+ (1,0) [0|250] ""  Telematics
+ SG_ TS_VCU_Faults : 40|8@1+ (1,0) [0|250] ""  Telematics
+ SG_ TS_MCU_FaultCodes : 8|8@1+ (1,0) [0|250] ""  Telematics
+ SG_ TS_BMS_Faults : 0|8@1+ (1,0) [0|250] ""  Telematics
+
+BO_ 2566885642 TP10_Date_Time_Info: 8 VCU
+ SG_ TS_Year_Information : 44|16@1+ (1,1985) [1985|2235] "year"  Telematics
+ SG_ TS_Month_Information : 40|4@1+ (1,0) [0|15] ""  Telematics
+ SG_ TS_Date_Information : 32|8@1+ (1,0) [0|31] ""  Telematics
+ SG_ TS_Minute_Information : 8|8@1+ (1,0) [0|60] "min"  Telematics
+ SG_ TS_Milli_Seconds_Info : 16|16@1+ (1,0) [0|1000] "ms"  Telematics
+ SG_ TS_Hour_Information : 0|8@1+ (1,0) [0|24] "hr"  Telematics
+ SG_ TS_Clock_Mode : 60|1@1+ (1,0) [0|1] ""  Telematics
+
+BO_ 2566885130 TP8_Driver_Info_parameters_3: 8 VCU
+ SG_ TS_Reserved_12 : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TS_Reserved_11 : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TS_Vehicle_Interior_Temperature : 32|8@1+ (1,-40) [-40|210] "Deg C" Vector__XXX
+ SG_ TS_Vehicle_Odometer : 0|24@1+ (1,0) [0|16449535] "km"  Telematics
+ SG_ TS_TCS_Coolant_temperature : 24|8@1+ (1,-40) [-40|210] "Deg C"  Telematics
+ SG_ TS_BCS_Coolant_Temperature : 40|8@1+ (1,-40) [-40|210] "Deg C"  Telematics
+ SG_ TS_Ambient_Temperature : 48|8@1+ (1,-40) [-40|210] "Deg C"  Telematics
+
+BO_ 2566884874 TP7_Driver_Info_parameters_2: 8 VCU
+ SG_ TS_Reserved_9 : 40|16@1+ (1,0) [0|64255] "" Vector__XXX
+ SG_ TS_Reserved_8 : 24|16@1+ (1,0) [0|64255] "" Vector__XXX
+ SG_ TS_TTC_Minute_Info : 16|8@1+ (1,0) [0|60] "min" Vector__XXX
+ SG_ TS_TTC_Hour_Info : 8|8@1+ (1,0) [0|24] "hr" Vector__XXX
+ SG_ TS_DTE_Info : 0|8@1+ (1,0) [0|250] "km"  Telematics
+
+BO_ 2566884618 TP6_Driver_Info_Parameters: 8 VCU
+ SG_ TS_vehicle_speed : 8|8@1+ (1,0) [0|150] "kmph"  Telematics
+ SG_ TS_Customer_SOC : 0|8@1+ (1,0) [0|100] "%"  Telematics
+ SG_ TS_Energy_Consumption : 16|16@1+ (0.01953125,0) [0|1254.9804] "kWh/km"  Telematics
+ SG_ TS_Drive_Efficiency : 35|3@1+ (1,0) [0|7] ""  Telematics
+ SG_ TS_Act_Drive_mode : 32|3@1+ (1,0) [0|7] ""  Telematics
+
+BO_ 2566883594 TP5_ControllerDiagnosticParametr: 8 VCU
+ SG_ TS_Reserved_6 : 1|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ TS_MCU_Warning_Active : 6|1@1+ (1,0) [0|1] ""  Telematics
+ SG_ TS_Reserved_7 : 9|2@1+ (1,0) [0|3] ""  Telematics
+ SG_ TS_Regen_Status : 15|1@1+ (1,0) [0|1] ""  Telematics
+ SG_ TS_Nms_Status : 7|2@1+ (1,0) [0|3] ""  Telematics
+ SG_ TS_Drive_Enabled : 0|1@1+ (1,0) [0|1] ""  Telematics
+ SG_ TS_MCU_Error_Active : 5|1@1+ (1,0) [0|1] ""  Telematics
+ SG_ TS_Derating_signal_status : 11|4@1+ (1,0) [0|15] ""  Telematics
+
+BO_ 2566882058 TP2_Battery_thermal_parameters: 8 VCU
+ SG_ TS_Reserved_3 : 56|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ TS_Reserved_2 : 48|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ TS_Low_Temperature : 32|16@1+ (0.03125,-273) [-40|210] "Deg C"  Telematics
+ SG_ TS_High_Temperature : 0|16@1+ (0.03125,-273) [-40|210] "Deg C"  Telematics
+ SG_ TS_Reserved_21 : 24|8@1+ (1,0) [0|250] ""  Telematics
+ SG_ TS_Reserved_20 : 16|8@1+ (1,0) [0|250] ""  Telematics
+
+BO_ 2566881802 TP1_Pack_Parameters: 8 VCU
+ SG_ TS_Reserved_1 : 48|16@1+ (1,0) [0|64255] "" Vector__XXX
+ SG_ TS_Pack_SOC : 32|16@1+ (0.0015625,0) [0|100] "%"  Telematics
+ SG_ TS_Pack_Instant_Voltage : 16|16@1+ (0.05,0) [0|1000] "V"  Telematics
+ SG_ TS_Pack_current : 0|16@1+ (0.05,-1600) [-1000|1000] "A"  Telematics
+
+
+
+CM_ SG_ 2566883338 TS_Reserved_15 "VCU Indicates the Vehicle Interior Temperature signal to IC";
+CM_ SG_ 2566883338 TS_Reserved_16 "VCU Indicates the Vehicle Interior Temperature signal to IC";
+CM_ SG_ 2566883338 TS_Vehicle_Status "This signal indicates the status of the Regeneration";
+CM_ SG_ 2566883338 TS_Brake_Status "This signal indicates the status of the Regeneration";
+CM_ SG_ 2566882570 TS_Reserved_10 "This signal indicates that if any faults in electic drive system";
+CM_ SG_ 2566882570 TS_TripB_Meter "This signal indicates Trip B info.";
+CM_ SG_ 2566882570 TS_TripA_meter "This signal indicates Trip A info.";
+CM_ SG_ 2566887434 TS_battery_reserve_enable_status "Status information on battery reserved mode";
+CM_ SG_ 2566887234 TS_Reserved_SOC_Enable_Cmd "This signal is used to the enable reserved SOC.
+";
+CM_ SG_ 2566886922 TS_Thermal_system_faultcodes "This signal represents the compressor error flags.";
+CM_ SG_ 2566886922 TS_EPAS_FaultCode "EPAS Shall publish various type of errors to VCU";
+CM_ SG_ 2566885642 TS_Year_Information "This signal represents the Year Information.
+";
+CM_ SG_ 2566885642 TS_Month_Information "Month Information on VCU from IC.
+";
+CM_ SG_ 2566885642 TS_Date_Information "Date Information.
+";
+CM_ SG_ 2566885642 TS_Minute_Information "This signal represents the minute information.";
+CM_ SG_ 2566885642 TS_Milli_Seconds_Info "MilliSeconds Information on VCU from IC.
+";
+CM_ SG_ 2566885642 TS_Hour_Information "This signal respresents the hour Information.
+";
+CM_ SG_ 2566885642 TS_Clock_Mode "Clock Mode Information on VCU from IC.";
+CM_ SG_ 2566885130 TS_Reserved_12 "This signal indicates that if any faults in electic drive system";
+CM_ SG_ 2566885130 TS_Reserved_11 "This signal indicates that if any faults in electic drive system";
+CM_ SG_ 2566885130 TS_Vehicle_Interior_Temperature "This signal Indicates the Coolant Temperature.";
+CM_ SG_ 2566885130 TS_TCS_Coolant_temperature "VCU Indicates the Vehicle Interior Temperature signal to IC";
+CM_ SG_ 2566885130 TS_BCS_Coolant_Temperature "This signal Indicates the Coolant Temperature.";
+CM_ SG_ 2566885130 TS_Ambient_Temperature "VCU Indicates the Ambient temperature signal to IC.";
+CM_ SG_ 2566884874 TS_Reserved_9 "This signal indicates that if any faults in electic drive system";
+CM_ SG_ 2566884874 TS_Reserved_8 "This signal indicates that if any faults in electic drive system";
+CM_ SG_ 2566884874 TS_TTC_Minute_Info "This signal indicates the minute information of the time taken to complete the charge (TTC).";
+CM_ SG_ 2566884874 TS_TTC_Hour_Info "This signal indicates the hour information of the time taken to complete the charge.";
+CM_ SG_ 2566884874 TS_DTE_Info "This signal indicates distance to empty info.";
+CM_ SG_ 2566884618 TS_vehicle_speed "Vehicle speed information on IC.";
+CM_ SG_ 2566884618 TS_Customer_SOC "Customer SOC information  transmitted by VCU.";
+CM_ SG_ 2566884618 TS_Energy_Consumption "Energy consumption by the inverter.";
+CM_ SG_ 2566884618 TS_Drive_Efficiency "Represents the Drive efficiency of the inverter.";
+CM_ SG_ 2566884618 TS_Act_Drive_mode "This signal represents the drive mode/gear selector mode.";
+CM_ SG_ 2566883594 TS_Reserved_6 "VCU Indicates the Vehicle Interior Temperature signal to IC";
+CM_ SG_ 2566883594 TS_MCU_Warning_Active "This signal indicats that If any warning is active
+";
+CM_ SG_ 2566883594 TS_Reserved_7 "This signal indicates that if any faults in electic drive system";
+CM_ SG_ 2566883594 TS_Regen_Status "This signal indicates the status of the Regeneration";
+CM_ SG_ 2566883594 TS_Nms_Status "This signal indicates the status of Network management";
+CM_ SG_ 2566883594 TS_Drive_Enabled "This signal indicates the status of power stage enable signal
+";
+CM_ SG_ 2566883594 TS_MCU_Error_Active "This signal indicates that If any error is active
+";
+CM_ SG_ 2566883594 TS_Derating_signal_status "This signal indicates the status of Derating Mode or Limphome Mode.";
+CM_ SG_ 2566882058 TS_Reserved_3 "VCU Indicates the Vehicle Interior Temperature signal to IC";
+CM_ SG_ 2566882058 TS_Reserved_2 "VCU Indicates the Vehicle Interior Temperature signal to IC";
+CM_ SG_ 2566882058 TS_Low_Temperature "This signal indicates the location of cell  which is having Low temperature.";
+CM_ SG_ 2566882058 TS_High_Temperature "his signal indicates the highest temperature of the battery pack.";
+CM_ SG_ 2566882058 TS_Reserved_21 "This is the ID of the Lowest temperature thermistor.";
+CM_ SG_ 2566882058 TS_Reserved_20 "This is ID of the highest temperature thermistor.";
+CM_ SG_ 2566881802 TS_Reserved_1 "VCU Indicates the Vehicle Interior Temperature signal to IC";
+CM_ SG_ 2566881802 TS_Pack_SOC "This signal indicates the state of Charge of battery pack. ";
+CM_ SG_ 2566881802 TS_Pack_Instant_Voltage "The voltage level of battery pack.";
+CM_ SG_ 2566881802 TS_Pack_current "The Current IN or OUT of the Battery pack.";
+BA_DEF_  "Baudrate" INT 250000 500000;
+BA_DEF_ BO_  "J1939FdTpADS" INT 0 52;
+BA_DEF_ BO_  "J1939FdTpADT" INT 0 255;
+BA_DEF_ BO_  "J1939PgAppearanceOnBus" ENUM  "Default","CAN_Extended","CANFD_Extended";
+BA_DEF_ BO_  "J1939CPgSendTimeout" INT -1 3600000;
+BA_DEF_ BO_  "J1939CPgTOS" INT 0 7;
+BA_DEF_ BO_  "J1939CPgTF" INT 0 7;
+BA_DEF_ BU_  "J1939MultiPgSendTimeout" INT 0 3600000;
+BA_DEF_ BU_  "J1939MultiPgSizeThreshold" INT 0 64;
+BA_DEF_ BU_  "J1939MultiPgBroadcastType" ENUM  "FBFF","FEFF";
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_ BO_  "FsJ1939UseCrcAndCounter" STRING ;
+BA_DEF_ BO_  "FsJ1939NeedsSHM" ENUM  "No","Yes";
+BA_DEF_ BO_  "FsJ1939Delay" INT 0 1000;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "Baudrate" 250000;
+BA_DEF_DEF_  "J1939FdTpADS" 0;
+BA_DEF_DEF_  "J1939FdTpADT" 0;
+BA_DEF_DEF_  "J1939PgAppearanceOnBus" "Default";
+BA_DEF_DEF_  "J1939CPgSendTimeout" -1;
+BA_DEF_DEF_  "J1939CPgTOS" 2;
+BA_DEF_DEF_  "J1939CPgTF" 0;
+BA_DEF_DEF_  "J1939MultiPgSendTimeout" 2;
+BA_DEF_DEF_  "J1939MultiPgSizeThreshold" 56;
+BA_DEF_DEF_  "J1939MultiPgBroadcastType" "FBFF";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "FsJ1939UseCrcAndCounter" "";
+BA_DEF_DEF_  "FsJ1939NeedsSHM" "No";
+BA_DEF_DEF_  "FsJ1939Delay" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "DatabaseVersion" "R01";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DBName" "eSCV_Telematics_CAN";
+BA_ "NmStationAddress" BU_ Telematics 66;
+BA_ "NmStationAddress" BU_ VCU 10;
+BA_ "GenMsgCycleTime" BO_ 2566883338 500;
+BA_ "GenMsgSendType" BO_ 2566883338 0;
+BA_ "VFrameFormat" BO_ 2566883338 3;
+BA_ "GenMsgCycleTime" BO_ 2566883082 500;
+BA_ "GenMsgSendType" BO_ 2566883082 0;
+BA_ "VFrameFormat" BO_ 2566883082 3;
+BA_ "GenMsgCycleTime" BO_ 2566882826 500;
+BA_ "GenMsgSendType" BO_ 2566882826 0;
+BA_ "VFrameFormat" BO_ 2566882826 3;
+BA_ "GenMsgCycleTime" BO_ 2566882570 500;
+BA_ "GenMsgSendType" BO_ 2566882570 0;
+BA_ "VFrameFormat" BO_ 2566882570 3;
+BA_ "GenMsgCycleTime" BO_ 2566887434 500;
+BA_ "GenMsgSendType" BO_ 2566887434 0;
+BA_ "VFrameFormat" BO_ 2566887434 3;
+BA_ "VFrameFormat" BO_ 2566887234 3;
+BA_ "GenMsgCycleTime" BO_ 2566886666 500;
+BA_ "GenMsgSendType" BO_ 2566886666 0;
+BA_ "VFrameFormat" BO_ 2566886666 3;
+BA_ "GenMsgSendType" BO_ 2566886922 0;
+BA_ "GenMsgCycleTime" BO_ 2566886922 500;
+BA_ "VFrameFormat" BO_ 2566886922 3;
+BA_ "GenMsgSendType" BO_ 2566885642 0;
+BA_ "GenMsgCycleTime" BO_ 2566885642 500;
+BA_ "VFrameFormat" BO_ 2566885642 3;
+BA_ "GenMsgCycleTime" BO_ 2566885130 500;
+BA_ "GenMsgSendType" BO_ 2566885130 0;
+BA_ "VFrameFormat" BO_ 2566885130 3;
+BA_ "GenMsgCycleTime" BO_ 2566884874 500;
+BA_ "GenMsgSendType" BO_ 2566884874 0;
+BA_ "VFrameFormat" BO_ 2566884874 3;
+BA_ "GenMsgCycleTime" BO_ 2566884618 500;
+BA_ "GenMsgSendType" BO_ 2566884618 0;
+BA_ "VFrameFormat" BO_ 2566884618 3;
+BA_ "GenMsgSendType" BO_ 2566883594 0;
+BA_ "GenMsgCycleTime" BO_ 2566883594 500;
+BA_ "VFrameFormat" BO_ 2566883594 3;
+BA_ "GenMsgSendType" BO_ 2566882058 0;
+BA_ "GenMsgCycleTime" BO_ 2566882058 500;
+BA_ "VFrameFormat" BO_ 2566882058 3;
+BA_ "GenMsgSendType" BO_ 2566881802 0;
+BA_ "GenMsgCycleTime" BO_ 2566881802 500;
+BA_ "VFrameFormat" BO_ 2566881802 3;
+BA_ "SPN" SG_ 2566883338 TS_Reserved_19 521170;
+BA_ "GenSigSendType" SG_ 2566883338 TS_Reserved_19 0;
+BA_ "GenSigStartValue" SG_ 2566883338 TS_Reserved_15 0;
+BA_ "GenSigSendType" SG_ 2566883338 TS_Reserved_15 0;
+BA_ "GenSigStartValue" SG_ 2566883338 TS_Reserved_16 0;
+BA_ "GenSigSendType" SG_ 2566883338 TS_Reserved_16 0;
+BA_ "SPN" SG_ 2566883338 TS_Vehicle_Status 521155;
+BA_ "GenSigSendType" SG_ 2566883338 TS_Vehicle_Status 0;
+BA_ "SPN" SG_ 2566883338 TS_Brake_Status 521154;
+BA_ "GenSigSendType" SG_ 2566883338 TS_Brake_Status 0;
+BA_ "SPN" SG_ 2566883082 TS_Motor_Temperature 521151;
+BA_ "GenSigSendType" SG_ 2566883082 TS_Motor_Temperature 0;
+BA_ "GenSigStartValue" SG_ 2566883082 TS_Motor_Temperature 40;
+BA_ "SPN" SG_ 2566883082 TS_Motor_RPM 521153;
+BA_ "GenSigSendType" SG_ 2566883082 TS_Motor_RPM 0;
+BA_ "GenSigStartValue" SG_ 2566883082 TS_Motor_RPM 32127;
+BA_ "SPN" SG_ 2566883082 TS_Motor_Phase_current_AC 521150;
+BA_ "GenSigSendType" SG_ 2566883082 TS_Motor_Phase_current_AC 0;
+BA_ "SPN" SG_ 2566883082 TS_MCU_Current_DC 521149;
+BA_ "GenSigSendType" SG_ 2566883082 TS_MCU_Current_DC 0;
+BA_ "GenSigStartValue" SG_ 2566883082 TS_MCU_Current_DC 32000;
+BA_ "SPN" SG_ 2566883082 TS_Controller_Temperature 521152;
+BA_ "GenSigStartValue" SG_ 2566883082 TS_Controller_Temperature 40;
+BA_ "GenSigSendType" SG_ 2566883082 TS_Controller_Temperature 0;
+BA_ "GenSigSendType" SG_ 2566882826 TS_Reserved_14 0;
+BA_ "GenSigSendType" SG_ 2566882826 TS_Reserved_22 0;
+BA_ "GenSigSendType" SG_ 2566882826 TS_Battery_Full_Capacity 0;
+BA_ "SPN" SG_ 2566882826 TS_Battery_Full_Capacity 521147;
+BA_ "GenSigSendType" SG_ 2566882826 TS_Battery_Capacity_Remaining 0;
+BA_ "SPN" SG_ 2566882826 TS_Battery_Capacity_Remaining 521146;
+BA_ "GenSigSendType" SG_ 2566882570 TS_Reserved_10 0;
+BA_ "GenSigSendType" SG_ 2566882570 TS_TripB_Meter 0;
+BA_ "SPN" SG_ 2566882570 TS_TripB_Meter 516180;
+BA_ "GenSigSendType" SG_ 2566882570 TS_TripA_meter 0;
+BA_ "SPN" SG_ 2566882570 TS_TripA_meter 516179;
+BA_ "SPN" SG_ 2566887434 TS_battery_reserve_enable_status 521166;
+BA_ "GenSigSendType" SG_ 2566887434 TS_battery_reserve_enable_status 1;
+BA_ "SPN" SG_ 2566887234 TS_Reserved_SOC_Enable_Cmd 523236;
+BA_ "GenSigSendType" SG_ 2566887234 TS_Reserved_SOC_Enable_Cmd 1;
+BA_ "SPN" SG_ 2566886666 TS_EPAS_CAN_health 521157;
+BA_ "GenSigSendType" SG_ 2566886666 TS_EPAS_CAN_health 0;
+BA_ "SPN" SG_ 2566886666 TS_EPAS_status 521156;
+BA_ "GenSigSendType" SG_ 2566886666 TS_EPAS_status 0;
+BA_ "SPN" SG_ 2566886922 TS_Thermal_system_faultcodes 521163;
+BA_ "GenSigSendType" SG_ 2566886922 TS_Thermal_system_faultcodes 0;
+BA_ "SPN" SG_ 2566886922 TS_OBC_faults 521160;
+BA_ "GenSigSendType" SG_ 2566886922 TS_OBC_faults 0;
+BA_ "GenSigSendType" SG_ 2566886922 TS_DC_DC_Faults 0;
+BA_ "SPN" SG_ 2566886922 TS_DC_DC_Faults 521161;
+BA_ "GenSigSendType" SG_ 2566886922 TS_EPAS_FaultCode 0;
+BA_ "SPN" SG_ 2566886922 TS_EPAS_FaultCode 521162;
+BA_ "GenSigSendType" SG_ 2566886922 TS_VCU_Faults 0;
+BA_ "SPN" SG_ 2566886922 TS_VCU_Faults 521164;
+BA_ "GenSigSendType" SG_ 2566886922 TS_MCU_FaultCodes 0;
+BA_ "SPN" SG_ 2566886922 TS_MCU_FaultCodes 521159;
+BA_ "GenSigSendType" SG_ 2566886922 TS_BMS_Faults 0;
+BA_ "SPN" SG_ 2566886922 TS_BMS_Faults 521158;
+BA_ "GenSigStartValue" SG_ 2566885642 TS_Year_Information 0;
+BA_ "GenSigSendType" SG_ 2566885642 TS_Year_Information 0;
+BA_ "SPN" SG_ 2566885642 TS_Year_Information 521144;
+BA_ "GenSigSendType" SG_ 2566885642 TS_Month_Information 0;
+BA_ "SPN" SG_ 2566885642 TS_Month_Information 521143;
+BA_ "GenSigSendType" SG_ 2566885642 TS_Date_Information 0;
+BA_ "SPN" SG_ 2566885642 TS_Date_Information 521142;
+BA_ "GenSigSendType" SG_ 2566885642 TS_Minute_Information 0;
+BA_ "SPN" SG_ 2566885642 TS_Minute_Information 521140;
+BA_ "GenSigSendType" SG_ 2566885642 TS_Milli_Seconds_Info 0;
+BA_ "SPN" SG_ 2566885642 TS_Milli_Seconds_Info 521141;
+BA_ "GenSigSendType" SG_ 2566885642 TS_Hour_Information 0;
+BA_ "SPN" SG_ 2566885642 TS_Hour_Information 521139;
+BA_ "GenSigSendType" SG_ 2566885642 TS_Clock_Mode 0;
+BA_ "SPN" SG_ 2566885642 TS_Clock_Mode 521145;
+BA_ "GenSigSendType" SG_ 2566885130 TS_Reserved_12 0;
+BA_ "GenSigSendType" SG_ 2566885130 TS_Reserved_11 0;
+BA_ "SPN" SG_ 2566885130 TS_Vehicle_Interior_Temperature 521134;
+BA_ "GenSigStartValue" SG_ 2566885130 TS_Vehicle_Interior_Temperature 40;
+BA_ "GenSigSendType" SG_ 2566885130 TS_Vehicle_Interior_Temperature 0;
+BA_ "GenSigSendType" SG_ 2566885130 TS_Vehicle_Odometer 0;
+BA_ "SPN" SG_ 2566885130 TS_Vehicle_Odometer 521132;
+BA_ "SPN" SG_ 2566885130 TS_TCS_Coolant_temperature 521133;
+BA_ "GenSigSendType" SG_ 2566885130 TS_TCS_Coolant_temperature 0;
+BA_ "GenSigStartValue" SG_ 2566885130 TS_TCS_Coolant_temperature 40;
+BA_ "SPN" SG_ 2566885130 TS_BCS_Coolant_Temperature 521135;
+BA_ "GenSigSendType" SG_ 2566885130 TS_BCS_Coolant_Temperature 0;
+BA_ "GenSigStartValue" SG_ 2566885130 TS_BCS_Coolant_Temperature 40;
+BA_ "SPN" SG_ 2566885130 TS_Ambient_Temperature 521136;
+BA_ "GenSigSendType" SG_ 2566885130 TS_Ambient_Temperature 0;
+BA_ "GenSigStartValue" SG_ 2566885130 TS_Ambient_Temperature 40;
+BA_ "GenSigSendType" SG_ 2566884874 TS_Reserved_9 0;
+BA_ "GenSigSendType" SG_ 2566884874 TS_Reserved_8 0;
+BA_ "GenSigSendType" SG_ 2566884874 TS_TTC_Minute_Info 0;
+BA_ "SPN" SG_ 2566884874 TS_TTC_Minute_Info 521129;
+BA_ "GenSigSendType" SG_ 2566884874 TS_TTC_Hour_Info 0;
+BA_ "SPN" SG_ 2566884874 TS_TTC_Hour_Info 521128;
+BA_ "GenSigSendType" SG_ 2566884874 TS_DTE_Info 0;
+BA_ "SPN" SG_ 2566884874 TS_DTE_Info 521127;
+BA_ "GenSigSendType" SG_ 2566884618 TS_vehicle_speed 0;
+BA_ "SPN" SG_ 2566884618 TS_vehicle_speed 521123;
+BA_ "GenSigSendType" SG_ 2566884618 TS_Customer_SOC 0;
+BA_ "SPN" SG_ 2566884618 TS_Customer_SOC 521122;
+BA_ "GenSigSendType" SG_ 2566884618 TS_Energy_Consumption 0;
+BA_ "SPN" SG_ 2566884618 TS_Energy_Consumption 521124;
+BA_ "GenSigSendType" SG_ 2566884618 TS_Drive_Efficiency 0;
+BA_ "SPN" SG_ 2566884618 TS_Drive_Efficiency 521126;
+BA_ "GenSigSendType" SG_ 2566884618 TS_Act_Drive_mode 0;
+BA_ "SPN" SG_ 2566884618 TS_Act_Drive_mode 521125;
+BA_ "GenSigStartValue" SG_ 2566883594 TS_Reserved_6 0;
+BA_ "GenSigSendType" SG_ 2566883594 TS_Reserved_6 0;
+BA_ "GenSigSendType" SG_ 2566883594 TS_MCU_Warning_Active 0;
+BA_ "SPN" SG_ 2566883594 TS_MCU_Warning_Active 521118;
+BA_ "GenSigSendType" SG_ 2566883594 TS_Reserved_7 0;
+BA_ "GenSigSendType" SG_ 2566883594 TS_Regen_Status 0;
+BA_ "SPN" SG_ 2566883594 TS_Regen_Status 521121;
+BA_ "GenSigSendType" SG_ 2566883594 TS_Nms_Status 0;
+BA_ "SPN" SG_ 2566883594 TS_Nms_Status 521119;
+BA_ "GenSigSendType" SG_ 2566883594 TS_Drive_Enabled 0;
+BA_ "SPN" SG_ 2566883594 TS_Drive_Enabled 521116;
+BA_ "GenSigSendType" SG_ 2566883594 TS_MCU_Error_Active 0;
+BA_ "SPN" SG_ 2566883594 TS_MCU_Error_Active 521117;
+BA_ "GenSigSendType" SG_ 2566883594 TS_Derating_signal_status 0;
+BA_ "SPN" SG_ 2566883594 TS_Derating_signal_status 521120;
+BA_ "GenSigSendType" SG_ 2566882058 TS_Reserved_3 0;
+BA_ "GenSigStartValue" SG_ 2566882058 TS_Reserved_3 0;
+BA_ "GenSigSendType" SG_ 2566882058 TS_Reserved_2 0;
+BA_ "GenSigStartValue" SG_ 2566882058 TS_Reserved_2 0;
+BA_ "GenSigStartValue" SG_ 2566882058 TS_Low_Temperature 8736;
+BA_ "GenSigSendType" SG_ 2566882058 TS_Low_Temperature 0;
+BA_ "SPN" SG_ 2566882058 TS_Low_Temperature 521111;
+BA_ "GenSigSendType" SG_ 2566882058 TS_High_Temperature 0;
+BA_ "GenSigStartValue" SG_ 2566882058 TS_High_Temperature 8736;
+BA_ "SPN" SG_ 2566882058 TS_High_Temperature 521108;
+BA_ "GenSigSendType" SG_ 2566882058 TS_Reserved_21 0;
+BA_ "SPN" SG_ 2566882058 TS_Reserved_21 521110;
+BA_ "GenSigSendType" SG_ 2566882058 TS_Reserved_20 0;
+BA_ "SPN" SG_ 2566882058 TS_Reserved_20 521109;
+BA_ "GenSigSendType" SG_ 2566881802 TS_Reserved_1 0;
+BA_ "GenSigStartValue" SG_ 2566881802 TS_Reserved_1 0;
+BA_ "GenSigSendType" SG_ 2566881802 TS_Pack_SOC 0;
+BA_ "SPN" SG_ 2566881802 TS_Pack_SOC 521107;
+BA_ "GenSigSendType" SG_ 2566881802 TS_Pack_Instant_Voltage 0;
+BA_ "SPN" SG_ 2566881802 TS_Pack_Instant_Voltage 521106;
+BA_ "GenSigStartValue" SG_ 2566881802 TS_Pack_current 32000;
+BA_ "GenSigSendType" SG_ 2566881802 TS_Pack_current 0;
+BA_ "SPN" SG_ 2566881802 TS_Pack_current 521105;
+VAL_ 2566883338 TS_Vehicle_Status 5 "Sleep" 4 "Stop" 3 "Idle" 2 "Charging" 1 "Moving" 0 "No mode" ;
+VAL_ 2566883338 TS_Brake_Status 1 "On" 0 "Off" ;
+VAL_ 2566887434 TS_battery_reserve_enable_status 1 "On" 0 "Off" ;
+VAL_ 2566887234 TS_Reserved_SOC_Enable_Cmd 1 "On" 0 "Off" ;
+VAL_ 2566886666 TS_EPAS_status 3 "Reserved for future use" 2 "EPAS is not working" 1 "Reserved for future use" 0 "EPAS is working normal" ;
+VAL_ 2566886922 TS_Thermal_system_faultcodes 38 "Radiator_Fan_Failure" 37 "TCS_PumpFailure" 36 "TCS_CoolantLevel_sw_Short_Batt" 35 "TCS_Cout_TempSensor_Short_Gnd" 34 "TCS_Cin_TempSensor_Short_Battery" 33 "TCS_Cin_TempSensor_Short_Gnd" 32 "TCS_CoolantLevel_sw_Short_Batt" 31 "TCS_CoolantLevel_sw_Short_GND" 30 "TCS_Low_coolant_level" 29 "Comp_stall_error" 28 "Comp_Inpower_error" 27 "Comp_Current_sensor_Error" 26 "Comp_Temp_Sensor_error" 25 "Comp_LIN_protocol_Error" 24 "Comp_Communication_Error" 23 "Comp_Over_load" 22 "Comp_Over_heat" 21 "Comp_LV_Over_voltage_error" 20 "Comp_LV_Under_voltage_error" 19 "Comp_HV_Over_voltage_fault" 18 "Comp_HV_Under_Voltage_Fault" 17 "Condensor Fan failure" 16 "BCS pump failure" 15 "Low Vehicle voltage" 14 "Suction_PresseureSensrShort_Gnd" 13 "Suction_PresseureSensrShort_Batt" 12 "Dischrg_PresseureSensrShort_Gnd" 11 "BCS_Cout_TempSensor_Short_Batt" 10 "BCS_Cout_TempSensor_Short_Gnd" 9 "BCS_Cin_TempSensor_Short_Battery" 7 "Ambientsensor_Short_Battery" 6 "Ambientsensor_Short_Ground" 5 "BCS_CoolantLevel_sw_Short_Batt" 3 "Referigerent leakage error" 8 "BCS_Cin_TempSensor_Short_Gnd" 4 "BCS_CoolantLevel_sw_Short_GND" 2 "BCS_Low_coolant_level" 1 "Dischrg_PresseureSensrShort_Bat" 0 "No error" ;
+VAL_ 2566886922 TS_OBC_faults 15 "OBC_Communication_fault" 14 "OBC_Inlet_tempsensor_fault" 13 "OBC_Internal_shutdown" 12 "OBC_Internal_Derate" 11 "OBC_Overtemp_shutdown" 10 "OBC_Overtemp_Derate" 9 "OBC_InputOverCurrent_fault" 8 "OBC_12V_fault" 7 "OBC_OutputShortckt_fault" 6 "OBC_OutputOvervolt_fault" 5 "OBC_OutputUndervolt_fault" 4 "OBC_InputUndervolt_fault" 3 "OBC_InputOvervoltage fault" 2 "OBC_Reserved1" 1 "OBC_hardware_protection" 0 "No fault" ;
+VAL_ 2566886922 TS_DC_DC_Faults 15 "DCDC_Reserved_fault" 14 "DCDC_12V_fault" 13 "Output_hardware_volt_over" 12 "Output_hardware_open" 11 "Hardware fault" 10 "Output_Power_Over_Fault" 9 "DCDC Communication_fault" 8 "Internal_protection_fault" 7 "Output_short_circuit_protection" 6 "Input_Undervoltage_fault" 5 "Input_Overvoltage_fault" 4 "Output_Undervoltage_fault" 3 "Output_Overvoltage_fault" 2 "Output_Overcurrent_fault" 1 "Over_Temperature_shutdown" 0 "No Fault Code" ;
+VAL_ 2566886922 TS_EPAS_FaultCode 12 "Continus/PeakCurentDetectionFail" 11 "CAN timeout fault" 10 "ADC freeze fault" 9 "ADC IRQ fault" 8 "Feedback path fault" 4 "Angle sensor fault" 15 "Gate driver over temp" 14 "Gate driver short" 13 "PCB over temp fault" 7 "Current sensor fault" 6 "ADC reference voltage fault" 5 "Torque sensor fault" 3 "Motor drive fault" 2 "5V fault" 1 "12V Battery Supply fault" 0 "No error" ;
+VAL_ 2566886922 TS_VCU_Faults 16 "SDNR_Not_in_Neutral" 15 "Reserved for future use" 14 "Emergency_Shutoff_Request" 13 "Brake_Coherence_Fault" 12 "Recovery_Throttle" 11 "Brake_Not_pressed" 10 "Throttle_Not_released" 9 "HPD or Sequencing Fault" 8 "Brakepot_High" 7 "Brakepot_Low" 6 "Primary_ThrottlePot_High" 5 "Primary_ThrottlePot_Low" 4 "MainContactorDidNotClose" 3 "MainContactorWelded" 2 "Service lamp indication" 1 "Malfunction Indication" 0 "No fault code" ;
+VAL_ 2566886922 TS_MCU_FaultCodes 36 "W phase current sensor fault" 35 "V phase current sensor fault" 34 "U phase current sensor fault" 33 "Motor_Overspeed_fault" 32 "Drive overtemp fault" 31 "Drive overload" 30 "W phase hall disconnection fault" 29 "V phase hall disconnection fault" 28 "U phase hall disconnection fault" 27 "LV_PwrSupply_Undervoltage_fault" 26 "PwrSuplyDriveborad_exceeds_limit" 25 "Controller_drive_Abnormal_fault" 24 "Resolver_Connector_is_loose" 23 "Hardware_over_voltage_fault" 22 "Drive board over run fault" 21 "OverVolt_basline_HW_wrong" 20 "Drive_parameter_R/W_Fault" 19 "DriveTempSensor_Disconnected" 18 "MotorOutputGND_ShortCkted" 17 "Drive protection fault" 16 "Software over voltage fault" 15 "Software over current fault" 14 "Communication fault" 13 "CAN Enable fault" 12 "Lost phase" 11 "High voltage interlock" 10 "12V uner voltage fault" 9 "12V over voltage fault" 8 "Stall detected" 7 "Resolver fault" 6 "Motor_Temp_Sensor_Fault" 5 "Controller_Over_Temperature" 4 "Motor_Over_Temperature" 3 "HardwareOverCurrent" 2 "OverVoltHV" 1 "UnderVoltHV" 0 "No fault" ;
+VAL_ 2566886922 TS_BMS_Faults 6 "Charge current limit fault" 5 "Dicharge current limit fault" 4 "High cell temperature fault" 3 "Low cell temperature fault" 2 "Cell Over voltage fault" 1 "Cell Under voltage fault" 0 "No Fault Code" ;
+VAL_ 2566885642 TS_Month_Information 12 "December" 11 "November" 10 "October" 9 "September" 8 "August" 7 "July" 6 "June" 5 "May" 4 "April" 3 "March" 2 "February" 1 "January" 0 "Unused" ;
+VAL_ 2566885642 TS_Clock_Mode 1 "24 Hour Mode" 0 "12 Hour Mode" ;
+VAL_ 2566884618 TS_Drive_Efficiency 3 "Reserved" 2 "Regen" 1 "Reserved" 0 "ECO" ;
+VAL_ 2566884618 TS_Act_Drive_mode 4 "Limphome Mode" 3 "Reverse Mode" 2 "Neutral Mode" 1 "Power Mode" 0 "City Mode" ;
+VAL_ 2566883594 TS_MCU_Warning_Active 1 "ON" 0 "Off" ;
+VAL_ 2566883594 TS_Regen_Status 1 "ON" 0 "OFF" ;
+VAL_ 2566883594 TS_Nms_Status 3 "Error" 2 "active" 1 "sleep" 0 "wakeup" ;
+VAL_ 2566883594 TS_Drive_Enabled 1 "ON" 0 "OFF" ;
+VAL_ 2566883594 TS_MCU_Error_Active 1 "ON" 0 "Off" ;
+VAL_ 2566883594 TS_Derating_signal_status 1 "On" 0 "Off" ;
+
