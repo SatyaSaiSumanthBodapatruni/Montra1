@@ -68,6 +68,7 @@ class DataReadThread(QThread):
                                     res1 = response.split()
 
                                     if len(res1[1]) != 1:
+
                                         canid = ''.join(res1[:4])
                                         data = ' '.join(res1[5:])
                                     else:
